@@ -1,0 +1,13 @@
+site_name: MkDocs Experiments (sample)
+nav:
+  - Home: index.md
+  - ページ群:
+    - ページ1: page1.md
+    - ページ2: page2.md
+
+theme:
+  name: material
+  language: 'ja'
+plugins:
+  - search:
+      lang: ja
