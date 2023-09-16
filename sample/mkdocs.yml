@@ -6,14 +6,14 @@ nav:
     - Code Blocks: experiments/CodeBlocks.md
     - Content Tabs: experiments/ContentTabs.md
     - Data Tables: experiments/DataTables.md
-  - Discovery: discovery.md
+    - Diagrams: experiments/Diagrams.md
 
 theme:
   #name: mkdocs
   #name: readthedocs
   #locale: 'ja'
   name: material
-  language: 'ja'
+  #language: 'ja'
   features:
     - content.code.annotate
     - content.code.copy
@@ -49,7 +49,11 @@ repo_name: Takehara-Biz/mkdocs-experiments
 markdown_extensions:
   - admonition
   - pymdownx.details
-  - pymdownx.superfences
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
   - tables
   - pymdownx.tabbed:
       alternate_style: true
