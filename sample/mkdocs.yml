@@ -1,13 +1,65 @@
 site_name: MkDocs Experiments
 nav:
   - Home: index.md
-  - ページ群:
-    - ページ1: page1.md
-    - ページ2: page2.md
+  - Experiments:
+    - Admonitions: experiments/Admonitions.md
+    - Code Blocks: experiments/CodeBlocks.md
+    - Content Tabs: experiments/ContentTabs.md
+    - Data Tables: experiments/DataTables.md
+  - Discovery: discovery.md
 
 theme:
+  #name: mkdocs
+  #name: readthedocs
+  #locale: 'ja'
   name: material
   language: 'ja'
+  features:
+    - content.code.annotate
+    - content.code.copy
+    - content.code.select
+  icon:
+    repo: fontawesome/brands/github
+  palette:
+    # Palette toggle for automatic mode
+    - media: "(prefers-color-scheme)"
+      toggle:
+        icon: material/brightness-auto
+        name: Switch to light mode
+
+    # Palette toggle for light mode
+    - media: "(prefers-color-scheme: light)"
+      scheme: default 
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+
+    # Palette toggle for dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      toggle:
+        icon: material/brightness-4
+        name: Switch to system preference
 plugins:
   - search:
       lang: ja
+repo_url: https://github.com/Takehara-Biz/mkdocs-experiments
+repo_name: Takehara-Biz/mkdocs-experiments
+
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+  - tables
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - attr_list
+  - pymdownx.emoji:
+      emoji_index: !!python/name:materialx.emoji.twemoji
+      emoji_generator: !!python/name:materialx.emoji.to_svg
